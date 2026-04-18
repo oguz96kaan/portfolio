@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Your Name — Doctoral Candidate</title>
+<title>Oguz Kaan Ozalp — Doctoral Candidate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -462,6 +462,96 @@
     color: var(--bg);
   }
 
+  /* ============ PROJECT CARDS ============ */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .project-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    padding: 28px 26px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(26, 26, 26, 0.08);
+  }
+
+  .project-card .kind {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .project-card .kind::before {
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+
+  .project-card .status {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .project-card .description {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .project-card .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .project-card .tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 3px 10px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+  }
+
+  .project-card .card-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+  }
+
+  @media (max-width: 780px) {
+    .project-grid { grid-template-columns: 1fr; }
+  }
+
   /* ============ BLOG ============ */
   .blog-grid {
     display: grid;
@@ -565,10 +655,10 @@
   <!-- ============ HEADER ============ -->
   <header>
     <div class="masthead">
-      <div class="brand">Your <em>Name</em></div>
+      <div class="brand">Oguz Kaan <em>Ozalp</em></div>
       <div class="tag">
-        Doctoral Candidate <span class="dot">✦</span> Social Sciences<br>
-        University Name <span class="dot">✦</span> est. 20XX
+        Doctoral Candidate <span class="dot">✦</span> Public Affairs and Community Development<br>
+        Rutgers University – Camden
       </div>
     </div>
 
@@ -596,10 +686,10 @@
       <div class="bio-grid">
         <aside class="bio-sidebar">
           <div class="contact-block">
-            <div class="row"><span class="label">Email</span><a href="mailto:you@university.edu">you@university.edu</a></div>
-            <div class="row"><span class="label">LinkedIn</span><a href="#">/in/yourname</a></div>
-            <div class="row"><span class="label">ORCID</span><a href="#">0000-0000-0000</a></div>
-            <div class="row"><span class="label">Twitter</span><a href="#">@handle</a></div>
+            <div class="row"><span class="label">Email</span><a href="mailto:oko11@camden.rutgers.edu">oko11@camden.rutgers.edu</a></div>
+            <div class="row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/oguzkaanozalp/" target="_blank" rel="noopener">/in/oguzkaanozalp</a></div>
+            <div class="row"><span class="label">Twitter</span><a href="https://x.com/Oguz96Kaan" target="_blank" rel="noopener">@Oguz96Kaan</a></div>
+            <div class="row"><span class="label">ORCID</span><a href="https://orcid.org/0000-0002-5446-3954" target="_blank" rel="noopener">0000-0002-5446-3954</a></div>
           </div>
 
           <a href="#" class="pill accent" style="margin-top: 24px; width: 100%;">↓ Download CV (PDF)</a>
@@ -609,11 +699,13 @@
           <div class="section-label">About</div>
           <h2>A brief introduction, <em style="font-family:var(--serif);font-style:italic;color:var(--accent);">in my own words.</em></h2>
 
-          <p class="lead">I am a doctoral candidate in [Your Department] at [Your University], where my research examines [the broad topic you study]. My work sits at the intersection of [field A] and [field B], and draws on [methodological approach].</p>
+          <p class="lead">I am a doctoral candidate in Public Affairs and Community Development at Rutgers University – Camden, a research associate at the Senator Walter Rand Institute for Public Affairs, and an adjunct faculty member in Sociology at Salem Community College. My research unfolds along two parallel tracks.</p>
 
-          <p>Before starting my PhD, I worked as [prior role] at [organization], an experience that continues to shape how I think about the relationship between scholarship and the public. My dissertation, tentatively titled <em>"[Working Title]"</em>, investigates [central research question], with particular attention to [specific focus or case].</p>
+          <p>In my <strong>academic work</strong>, I take a mixed-methods approach to examine how nonprofit organizations sustain themselves within shifting political environments — what allows some to endure, adapt, and remain accountable to their missions, and what pushes others into decline.</p>
 
-          <p>Outside of formal academic work, I collaborate with community organizations in [city / region] on [type of project], and I write occasionally for public audiences. You can find that writing in the <strong>Notebook</strong>, and the more formal work in <strong>Publications</strong>.</p>
+          <p>My <strong>public scholarship</strong> moves in the opposite direction: rather than asking how institutions survive policy, it asks how policy lands on the ground. I study the reflections of public policy across everyday domains — transportation, community health, public safety, and food insecurity — to understand what it actually feels like to live inside the decisions made on our behalf.</p>
+
+          <p>You can find the more formal work in <strong>Publications</strong>, the public-facing projects and reports alongside it, and occasional notes on reading, teaching, and fieldwork in the <strong>Notebook</strong>.</p>
         </div>
       </div>
     </section>
@@ -626,48 +718,49 @@
 
       <div class="sub-nav" role="tablist">
         <button class="sub-btn active" data-sub="academic">Academic<span class="count">03</span></button>
-        <button class="sub-btn" data-sub="public">Public Scholarship<span class="count">04</span></button>
+        <button class="sub-btn" data-sub="public">Public Scholarship<span class="count">05</span></button>
+        <button class="sub-btn" data-sub="projects">Projects<span class="count">11</span></button>
+        <button class="sub-btn" data-sub="conferences">Conferences<span class="count">07</span></button>
       </div>
 
       <!-- Academic -->
       <div class="sub-panel active" id="academic">
         <div class="pub-item">
-          <div class="pub-year">2025</div>
+          <div class="pub-year">2022</div>
           <div class="pub-content">
-            <h3>[Title of the article or chapter goes here, in sentence case]</h3>
-            <div class="authors">Your Name &amp; Co-Author</div>
-            <div class="venue">Journal of [Field], vol. XX, no. X, pp. 00–00.</div>
-            <p class="abstract">A short one or two sentence abstract of the paper — what you asked, how you approached it, what you found. Keep it tight so it reads well on the page.</p>
+            <h3>An assessment of the institutional approach to immigration: Post 9/11 and securitized governance of immigration in the United States</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Master's Thesis, Middle East Technical University.</div>
+            <p class="abstract">Examines how immigration governance in the United States was reshaped after September 11, 2001, tracing the institutional shift toward a securitized framing of immigration policy and its consequences for migrants and the agencies that manage them.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill">PDF</a>
-            <a href="#" class="pill">DOI</a>
+            <a href="https://open.metu.edu.tr/handle/11511/99445" target="_blank" rel="noopener" class="pill accent">Thesis</a>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2024</div>
+          <div class="pub-year">2021</div>
           <div class="pub-content">
-            <h3>[Second article title]</h3>
-            <div class="authors">Your Name</div>
-            <div class="venue">Edited Volume Title, ed. Editor Name, Publisher, pp. 00–00.</div>
-            <p class="abstract">Brief description of the chapter, the question it takes up, and the contribution it makes to the field.</p>
+            <h3>A failed negotiation? A closer look at the EU–Turkey deal of 2016</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Journal of International Relations Studies, August 2021.</div>
+            <p class="abstract">Revisits the 2016 EU–Turkey agreement on migration, analyzing its negotiation, implementation, and limitations as a case study in how migration crises are managed across competing political jurisdictions.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill">PDF</a>
+            <a href="https://dergipark.org.tr/tr/download/article-file/2271240" target="_blank" rel="noopener" class="pill accent">PDF</a>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2023</div>
+          <div class="pub-year">2020</div>
           <div class="pub-content">
-            <h3>[Earlier paper or working paper title]</h3>
-            <div class="authors">Your Name, Co-Author A, &amp; Co-Author B</div>
-            <div class="venue">Working Paper, [Research Center].</div>
-            <p class="abstract">Short summary of the working paper or early-stage piece.</p>
+            <h3>An analysis of the underlying causes of the increase in Mexican immigration to the United States after the 1970s</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">International Journal of Afro-Eurasian Research, December 2020.</div>
+            <p class="abstract">Traces the structural and economic forces that drove Mexican migration to the United States from the 1970s onward, situating individual migration decisions within the larger arc of bilateral policy and regional economic change.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill">PDF</a>
+            <a href="https://dergipark.org.tr/en/download/article-file/1345285" target="_blank" rel="noopener" class="pill accent">PDF</a>
           </div>
         </div>
       </div>
@@ -675,55 +768,264 @@
       <!-- Public scholarship -->
       <div class="sub-panel" id="public">
         <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div class="pub-content">
+            <h3>2025–2027 Community Health Needs Assessment — AtlantiCare</h3>
+            <div class="authors">Senator Walter Rand Institute for Public Affairs, prepared for AtlantiCare</div>
+            <div class="venue">Report, February 2026.</div>
+            <p class="abstract">A comprehensive assessment of community health needs across AtlantiCare's service region, synthesizing public data, stakeholder input, and community voices to identify priorities for health systems planning in southern New Jersey.</p>
+          </div>
+          <div class="pub-links">
+            <a href="https://rand.camden.rutgers.edu/wp-content/uploads/sites/32/2026/02/WRI_AC_2.5_Final_Web.pdf" target="_blank" rel="noopener" class="pill accent">Report</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
           <div class="pub-year">2025</div>
           <div class="pub-content">
-            <h3>[Title of local report or policy brief]</h3>
-            <div class="authors">Prepared for [Local Organization / City Council]</div>
-            <div class="venue">Report, [Publisher or partner].</div>
-            <p class="abstract">A short description: who asked for the work, what community or question it addressed, what it concluded, and how it was used.</p>
+            <h3>The intersection of social work and libraries: A southern New Jersey perspective for expansion</h3>
+            <div class="authors">Senator Walter Rand Institute for Public Affairs</div>
+            <div class="venue">Report, March 2025.</div>
+            <p class="abstract">An exploratory study of how public libraries in southern New Jersey are increasingly functioning as sites of social service delivery, and what it would take to formally expand social work capacity within library systems.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill accent">Report</a>
-            <a href="#" class="pill">Summary</a>
+            <a href="https://www.njstatelib.org/wp-content/uploads/2024/12/WRI_Report_Exploratory_Research_Southern_New_Jersey_SWILIBS-NJ_August_2024.pdf" target="_blank" rel="noopener" class="pill accent">Report</a>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-year">2024</div>
           <div class="pub-content">
-            <h3>[Title of a community project or collaboration]</h3>
-            <div class="authors">With [Partner Organization]</div>
-            <div class="venue">Community project — [City / Region].</div>
-            <p class="abstract">Describe the project, your role in it, the methods used, and the intended audience. Link to any materials, media coverage, or public events it produced.</p>
+            <h3>Outlining the transportation priorities and recommendations of communities in Camden County</h3>
+            <div class="authors">Senator Walter Rand Institute for Public Affairs</div>
+            <div class="venue">Report, December 2024.</div>
+            <p class="abstract">A community-informed analysis of transportation needs across Camden County, translating resident priorities into concrete recommendations for local and county-level decision-makers.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill accent">Project site</a>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-year">2024</div>
-          <div class="pub-content">
-            <h3>[Op-ed or essay title]</h3>
-            <div class="authors">Your Name</div>
-            <div class="venue">[Newspaper or magazine name].</div>
-            <p class="abstract">A short note on what you argued and why it mattered locally.</p>
-          </div>
-          <div class="pub-links">
-            <a href="#" class="pill">Read</a>
+            <a href="https://rand.camden.rutgers.edu/wp-content/uploads/sites/32/2024/12/NJSPL-Transportation-in-Camden-County-Dec-2024-Final.pdf" target="_blank" rel="noopener" class="pill accent">Report</a>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-year">2023</div>
           <div class="pub-content">
-            <h3>[Earlier public-facing piece or report]</h3>
-            <div class="authors">Your Name</div>
-            <div class="venue">[Outlet or host organization].</div>
-            <p class="abstract">One-line description of the piece.</p>
+            <h3>Transportation accessibility in southern New Jersey: Barriers, effects, and considerations</h3>
+            <div class="authors">Senator Walter Rand Institute for Public Affairs</div>
+            <div class="venue">Report, December 2023.</div>
+            <p class="abstract">Examines the barriers residents face when accessing transportation across southern New Jersey, the downstream effects on employment, health, and daily life, and the considerations that should guide future investment.</p>
           </div>
           <div class="pub-links">
-            <a href="#" class="pill">Read</a>
+            <a href="https://sites.camden.rutgers.edu/wri/wp-content/uploads/sites/32/2023/12/Transportation-Accessibility-Southern-NJ-Walter-Rand-Institute-Report-12.23.pdf" target="_blank" rel="noopener" class="pill accent">Report</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-content">
+            <h3>Seeking work in southern New Jersey</h3>
+            <div class="authors">Senator Walter Rand Institute for Public Affairs</div>
+            <div class="venue">Report, December 2023.</div>
+            <p class="abstract">A regional study of what it actually takes to find and keep work in southern New Jersey — the frictions, supports, and structural conditions shaping the job search for residents of the region.</p>
+          </div>
+          <div class="pub-links">
+            <a href="https://rand.camden.rutgers.edu/wp-content/uploads/sites/32/2023/12/Seeking-Work-in-Southern-New-Jersey.pdf" target="_blank" rel="noopener" class="pill accent">Report</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="sub-panel" id="projects">
+        <p style="margin-bottom: 36px; max-width: 68ch;">Across these projects I draw on mixed-methods research strategies and grounded theory — combining interviews, focus groups, surveys, and administrative data to build analyses that stay close to the communities and institutions the work is meant to serve.</p>
+
+        <div class="project-grid">
+
+          <div class="project-card">
+            <div class="kind">Applied / Community</div>
+            <h3>Evaluation of the Growing Healthy Pantries (GHP) Toolkit</h3>
+            <div class="status">2025</div>
+            <p class="description">Evaluation of a toolkit designed to strengthen food pantry operations and the nutritional quality of food distributed to clients.</p>
+            <div class="meta">
+              <span class="tag">Food security</span>
+              <span class="tag">Program evaluation</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>Cumberland County Overdose Fatality Review Team — Community Profile &amp; Data Snapshots</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">Community-level profiles and data snapshots supporting the county's overdose fatality review process, translating complex data into accessible products for local decision-makers.</p>
+            <div class="meta">
+              <span class="tag">Public health</span>
+              <span class="tag">Cumberland County</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>Burlington County Overdose Fatality Review Team — Community Profile &amp; Data Snapshots</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">Parallel community profile and data work supporting Burlington County's overdose fatality review team, grounded in local context and county-specific patterns.</p>
+            <div class="meta">
+              <span class="tag">Public health</span>
+              <span class="tag">Burlington County</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Applied / Community</div>
+            <h3>Evaluation of CCIB's NSF National Research Traineeship — Codes For Life (C4L)</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">External evaluation of the Center for Computational and Integrative Biology's NSF-funded National Research Traineeship program, examining program design, participant outcomes, and interdisciplinary training.</p>
+            <div class="meta">
+              <span class="tag">Graduate education</span>
+              <span class="tag">NSF-funded</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>Camden Food Security Collective Evaluation</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">Evaluating the impact of the Collective Impact design and Collective-initiated programs on food security outcomes across Camden City.</p>
+            <div class="meta">
+              <span class="tag">Food security</span>
+              <span class="tag">Collective Impact</span>
+              <span class="tag">Camden, NJ</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Applied / Community</div>
+            <h3>AtlantiCare Community Health Assessment 2025–2027</h3>
+            <div class="status">2025–2026</div>
+            <p class="description">Comprehensive community health needs assessment for AtlantiCare's service region, drawing on public data, stakeholder engagement, and community input to inform health systems planning.</p>
+            <div class="meta">
+              <span class="tag">Community health</span>
+              <span class="tag">Needs assessment</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>The Clayton Model Pilot and Expansion — Years 2–5</h3>
+            <div class="status">2022–2026</div>
+            <p class="description">Multi-year evaluation of the Clayton Model's pilot and expansion phases, tracking implementation, outcomes, and scalability over a four-year window.</p>
+            <div class="meta">
+              <span class="tag">Longitudinal</span>
+              <span class="tag">Program evaluation</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>Environmental Justice in Waterfront South: Barriers and Residency</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">Examining the environmental-justice conditions, residency patterns, and structural barriers faced by residents of Camden's Waterfront South neighborhood.</p>
+            <div class="meta">
+              <span class="tag">Environmental justice</span>
+              <span class="tag">Camden, NJ</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Applied / Community</div>
+            <h3>Evaluation of the Camden Coalition's Medical-Legal Partnership at the Cooper Center for Healing</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">Evaluation of a medical-legal partnership embedded in a clinical care setting, assessing how integrated legal services shape health and well-being outcomes for patients.</p>
+            <div class="meta">
+              <span class="tag">Medical-legal</span>
+              <span class="tag">Camden, NJ</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Applied / Community</div>
+            <h3>Inspira Health Community Needs Assessment 2025–2027</h3>
+            <div class="status">2025–2026</div>
+            <p class="description">Community health needs assessment for Inspira Health, synthesizing quantitative data and community voices into actionable priorities for the region.</p>
+            <div class="meta">
+              <span class="tag">Community health</span>
+              <span class="tag">Needs assessment</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="kind">Research Project</div>
+            <h3>Perceptions of Violence and Safety in Three Southern New Jersey Counties</h3>
+            <div class="status">Ongoing</div>
+            <p class="description">A cross-county study of how residents of southern New Jersey perceive violence and safety in their communities, and how those perceptions relate to local conditions and policy.</p>
+            <div class="meta">
+              <span class="tag">Public safety</span>
+              <span class="tag">Southern NJ</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Conferences -->
+      <div class="sub-panel" id="conferences">
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div class="pub-content">
+            <h3>Politically restrictive environment and implications for immigrant non-profit space</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Paper presentation, Northeast Conference on Public Administration (NECoPA), Kean University, October 2025.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div class="pub-content">
+            <h3>Health equity framework in addressing the disconnection between migration and social determinants of health</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Paper presentation, The Migration Conference 2024, Universidad Iberoamericana, Mexico City, July 2024.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div class="pub-content">
+            <h3>Health equity framework in addressing the disconnection between migration and social determinants of health</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Paper presentation, RU Rising Stars Conference, Rutgers University – New Brunswick, March 2024.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-content">
+            <h3>Food security in NJ: Solutions and successes in three target cities</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Poster presentation, REACH Conference, New Brunswick, NJ, December 2023.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-content">
+            <h3>An analysis of food insecurity, suicide ideation, and suicide attempts among Mexican adults</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Paper presentation, Research Week, Rutgers University – Camden, May 2023.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div class="pub-content">
+            <h3>Community Health Needs Assessments (CHNA): An examination of four southern New Jersey counties — Atlantic, Gloucester, Cumberland, and Salem</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Poster presentation, Research Week, Rutgers University – Camden, May 2023.</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2021</div>
+          <div class="pub-content">
+            <h3>The identity odyssey in No-No Boy by John Okada</h3>
+            <div class="authors">Oguz Kaan Ozalp</div>
+            <div class="venue">Paper presentation, Undergraduate Conference, Hacettepe University, February 2021.</div>
           </div>
         </div>
       </div>
@@ -791,7 +1093,7 @@
   </main>
 
   <footer>
-    <div>© <span id="year"></span> Your Name <span class="ornament"> · </span> Last updated April 2026</div>
+    <div>© <span id="year"></span> Oguz Kaan Ozalp <span class="ornament"> · </span> Last updated April 2026</div>
     <div>Built with <span class="ornament">♡</span> and a lot of tea</div>
   </footer>
 
