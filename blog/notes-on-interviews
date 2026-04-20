@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+  =========================================================================
+  BLOG POST TEMPLATE
+  =========================================================================
+  To create a new post:
+  1. Copy this file and rename it to something like "my-post-title.html"
+     (use lowercase and hyphens, no spaces)
+  2. Fill in everything marked [IN BRACKETS] below
+  3. Put your post text inside the <div class="post-body"> section
+  4. Update the blog list in index.html so visitors can find your new post
+  =========================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>[Notes on an Interviewing Process as PhD Student] — Oguz Kaan Ozalp</title>
+<meta name="description" content="[One-sentence description of the post for search engines]" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f0e8; --bg-alt: #ece6d8; --ink: #1a1a1a; --ink-soft: #3d3833;
+    --muted: #6b645a; --line: #cdc5b4; --accent: #a8321f; --accent-soft: #c24a34;
+    --serif: 'Fraunces', 'Iowan Old Style', 'Georgia', serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; background-image: radial-gradient(ellipse at top left, rgba(168, 50, 31, 0.04) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(168, 50, 31, 0.03) 0%, transparent 50%); min-height: 100vh; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.35; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E"); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+  .site-header { padding: 32px 0 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .site-name { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; letter-spacing: -0.01em; }
+  .site-name em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .site-name a { color: var(--ink); text-decoration: none; }
+  .back-link { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .back-link:hover { color: var(--accent); }
+  article { padding: 56px 0 40px; }
+  .post-label { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  .post-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  h1.post-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 24px; font-variation-settings: 'opsz' 144; }
+  h1.post-title em { font-style: italic; color: var(--accent); }
+  .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .post-meta .date { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1rem; }
+  .post-meta .sep { color: var(--line); }
+  .post-meta .tag { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .content-warning { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 16px 20px; margin-bottom: 40px; font-size: 0.9rem; color: var(--ink-soft); font-style: italic; font-family: var(--serif); }
+  .content-warning strong { font-family: var(--sans); font-style: normal; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 6px; font-weight: 600; }
+  .post-body { font-family: var(--serif); font-size: 1.15rem; line-height: 1.7; color: var(--ink-soft); font-weight: 300; font-variation-settings: 'opsz' 72; }
+  .post-body p { margin-bottom: 24px; max-width: none; }
+  .post-body p:first-of-type::first-letter { font-size: 3.5rem; float: left; line-height: 0.9; padding: 6px 10px 0 0; font-weight: 500; color: var(--accent); }
+  .post-body h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; line-height: 1.2; margin-top: 48px; margin-bottom: 16px; color: var(--ink); letter-spacing: -0.01em; font-variation-settings: 'opsz' 96; }
+  .post-body strong { color: var(--ink); font-weight: 500; }
+  .post-body em { font-style: italic; }
+  .post-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(168, 50, 31, 0.3); transition: border-color 0.2s; }
+  .post-body a:hover { border-bottom-color: var(--accent); }
+  .post-body blockquote { border-left: 3px solid var(--accent); padding-left: 24px; margin: 32px 0; font-style: italic; color: var(--ink); }
+  .ornament-break { text-align: center; font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.5rem; margin: 48px 0; letter-spacing: 1em; }
+  .references { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .references h2 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: 20px; letter-spacing: -0.01em; }
+  .references ol { list-style: none; counter-reset: ref; padding: 0; }
+  .references li { counter-increment: ref; position: relative; padding-left: 32px; margin-bottom: 18px; font-family: var(--sans); font-size: 0.88rem; line-height: 1.55; color: var(--ink-soft); }
+  .references li::before { content: counter(ref); position: absolute; left: 0; top: 0; font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 0.95rem; }
+  .references a { color: var(--ink-soft); border-bottom: 1px dotted var(--muted); text-decoration: none; word-break: break-word; }
+  .references a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .post-footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .post-footer .back-big { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+  .post-footer .back-big:hover { color: var(--accent); border-color: var(--accent); }
+  .post-footer .share { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+  footer.site-footer { padding: 32px 0; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--muted); text-align: center; letter-spacing: 0.05em; margin-top: 24px; }
+  @media (max-width: 640px) { .wrap { padding: 0 20px; } article { padding: 40px 0 32px; } .post-body { font-size: 1.05rem; } .post-body p:first-of-type::first-letter { font-size: 2.8rem; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="site-name"><a href="../index.html">Oguz Kaan <em>Ozalp</em></a></div>
+    <a href="../index.html#blog" class="back-link">← Back to portfolio</a>
+  </header>
+
+  <article>
+    <div class="post-label">Notebook · [Essay / Note / Reading]</div>
+    <h1 class="post-title">[Notes on a Interviewing Process as PhD Student]</h1>
+
+    <div class="post-meta">
+      <span class="date">[April 2026]</span>
+      <span class="sep">·</span>
+      <span>[5] min read</span>
+      <span class="sep">·</span>
+      <span class="tag">[Tag 1]</span>
+      <span class="tag">[Tag 2]</span>
+    </div>
+
+    <div class="post-body">
+      <!-- Write your post here. Use these elements: -->
+
+      <p>Your opening paragraph goes here. The first letter of the first paragraph will automatically become a drop cap.</p>
+
+      <p>A second paragraph. Keep paragraphs focused — one idea each.</p>
+
+      <h2>A subheading to break up the piece</h2>
+
+      <p>More body text. You can use <strong>bold</strong> for emphasis, <em>italics</em> for titles or gentle emphasis, and <a href="https://example.com" target="_blank" rel="noopener">links like this</a>.</p>
+
+      <blockquote>
+        "Use blockquotes for pulled quotes or epigraphs."
+      </blockquote>
+
+      <p>Keep writing.</p>
+    </div>
+
+    <!--
+      OPTIONAL: Use an ornament to separate the essay from references. Delete if not using references.
+    -->
+    <div class="ornament-break">✦ ✦ ✦</div>
+
+    <!--
+      OPTIONAL: References section. Delete this whole block if the post has no references.
+    -->
+    <section class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Author, A. (Year). Title of work. <em>Journal Name</em>, volume(issue), pages. <a href="https://doi.org/..." target="_blank" rel="noopener">DOI or URL</a></li>
+        <li>Second reference.</li>
+      </ol>
+    </section>
+
+    <div class="post-footer">
+      <a href="../index.html#blog" class="back-big">← Back to all notes</a>
+      <span class="share">Share: copy the URL from your browser</span>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Oguz Kaan Ozalp
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
