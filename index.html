@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Oguz Kaan Ozalp, MSc. — Doctoral Candidate</title>
+<title>Oguz Kaan Ozalp — Doctoral Candidate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -553,6 +553,20 @@
   }
 
   /* ============ BLOG ============ */
+  .blog-post-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-post-link .blog-content h3 {
+    transition: color 0.25s ease;
+  }
+
+  .blog-post-link:hover .blog-content h3 {
+    color: var(--accent);
+  }
+
   .blog-grid {
     display: grid;
     gap: 0;
@@ -655,7 +669,7 @@
   <!-- ============ HEADER ============ -->
   <header>
     <div class="masthead">
-      <div class="brand">Oguz Kaan <em>Ozalp, MSc.</em></div>
+      <div class="brand">Oguz Kaan <em>Ozalp</em></div>
       <div class="tag">
         Doctoral Candidate <span class="dot">✦</span> Public Affairs and Community Development<br>
         Rutgers University – Camden
@@ -701,9 +715,9 @@
 
           <p class="lead">I am a doctoral candidate in Public Affairs and Community Development at Rutgers University – Camden, a research associate at the Senator Walter Rand Institute for Public Affairs, and an adjunct faculty member in Sociology at Salem Community College. My research unfolds along two parallel tracks.</p>
 
-          <p>In my <strong>academic work</strong>, I take a mixed-methods approach to examine how nonprofit organizations sustain themselves within shifting political environments, which allows some to endure, adapt, and remain accountable to their missions, and what pushes others into decline.</p>
+          <p>In my <strong>academic work</strong>, I take a mixed-methods approach to examine how nonprofit organizations sustain themselves within shifting political environments — what allows some to endure, adapt, and remain accountable to their missions, and what pushes others into decline.</p>
 
-          <p>My <strong>public scholarship</strong> moves in the opposite direction: rather than asking how institutions survive policy, it asks how policy lands on the ground. I study the reflections of public policy across everyday domains, transportation, community health, public safety, and food insecurity to understand what it actually feels like to live inside the decisions made on our behalf.</p>
+          <p>My <strong>public scholarship</strong> moves in the opposite direction: rather than asking how institutions survive policy, it asks how policy lands on the ground. I study the reflections of public policy across everyday domains — transportation, community health, public safety, and food insecurity — to understand what it actually feels like to live inside the decisions made on our behalf.</p>
 
           <p>You can find the more formal work in <strong>Publications</strong>, the public-facing projects and reports alongside it, and occasional notes on reading, teaching, and fieldwork in the <strong>Notebook</strong>.</p>
         </div>
@@ -714,7 +728,7 @@
     <section class="panel" id="pubs">
       <div class="section-label">Writing</div>
       <h2>Publications <em style="font-family:var(--serif);font-style:italic;color:var(--accent);">&</em> Public Scholarship</h2>
-      <p style="margin-bottom: 32px;">My work appears in peer-reviewed journals and edited volumes, and also in local reports, policy briefs, and community-facing projects.</p>
+      <p style="margin-bottom: 32px;">My work appears in peer-reviewed journals and edited volumes, and also in local reports, policy briefs, and community-facing projects. Both matter to me.</p>
 
       <div class="sub-nav" role="tablist">
         <button class="sub-btn active" data-sub="academic">Academic<span class="count">03</span></button>
@@ -1038,55 +1052,21 @@
       <p style="margin-bottom: 48px;">A slower, less formal place. I post occasionally — usually when something I'm reading, teaching, or working on won't leave me alone.</p>
 
       <div class="blog-grid">
-        <article class="blog-post">
-          <div class="blog-meta">
-            <div class="date">March 2026</div>
-            <div class="read-time">7 min read</div>
-          </div>
-          <div class="blog-content">
-            <h3>On the quiet politics of administrative data</h3>
-            <p class="excerpt">Working through what it means, methodologically and ethically, to treat bureaucratic records as a primary source — and what we owe the people inside them.</p>
-            <span class="blog-tag">Methods</span>
-            <span class="blog-tag">Ethics</span>
-          </div>
-        </article>
-
-        <article class="blog-post">
-          <div class="blog-meta">
-            <div class="date">January 2026</div>
-            <div class="read-time">5 min read</div>
-          </div>
-          <div class="blog-content">
-            <h3>Teaching notes: seminar three, where the reading falls apart</h3>
-            <p class="excerpt">Every semester there is one seminar where the argument in the assigned reading just… collapses. This year that happened to me in week three, and I want to write about what came out of it.</p>
-            <span class="blog-tag">Teaching</span>
-          </div>
-        </article>
-
-        <article class="blog-post">
-          <div class="blog-meta">
-            <div class="date">November 2025</div>
-            <div class="read-time">9 min read</div>
-          </div>
-          <div class="blog-content">
-            <h3>A note on fieldwork, after coming home</h3>
-            <p class="excerpt">The dissonance between writing up and being there. What gets preserved, what gets smoothed out, and the small decisions that change what a project ends up being about.</p>
-            <span class="blog-tag">Fieldwork</span>
-            <span class="blog-tag">Writing</span>
-          </div>
-        </article>
-
-        <article class="blog-post">
-          <div class="blog-meta">
-            <div class="date">August 2025</div>
-            <div class="read-time">4 min read</div>
-          </div>
-          <div class="blog-content">
-            <h3>Three things I am reading this month</h3>
-            <p class="excerpt">A short roundup — a new book on [topic], an older essay I keep returning to, and a policy report that deserves a wider audience.</p>
-            <span class="blog-tag">Reading</span>
-          </div>
-        </article>
+        <a href="blog/food-insecurity-mental-health.html" class="blog-post-link">
+          <article class="blog-post">
+            <div class="blog-meta">
+              <div class="date">April 2026</div>
+              <div class="read-time">7 min read</div>
+            </div>
+            <div class="blog-content">
+              <h3>[POST TITLE GOES HERE]</h3>
+              <p class="excerpt">On the connection between food insecurity and mental health — what the data says, why hunger is never only a physical problem, and why the conversation is overdue.</p>
+              <span class="blog-tag">Food security</span>
+              <span class="blog-tag">Mental health</span>
+              <span class="blog-tag">Essay</span>
+            </div>
+          </article>
+        </a>
       </div>
     </section>
 
